@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="Hw">
+
+	<!-- Sidebar -->
+	<select id="getSubjectInfo" resultType="kh.cocoa.dto.SubjectDTO">
+		select seq,name from subject where class_code=(select class_code from users where us_id=#{us_id})
+	</select>
+	
+		<!-- COMMON -->
+  	<select id="hwDidIAssigned" resultType="Integer">
+  		select count(*) from hw_submit where writer_id=#{writer_id} and list_seq=#{list_seq}
+  	</select>
+
+	<!-- dashBoard.jsp 과목대시보드 - 과목의 목록을 불러옴 -->
+	<select id="subjectListById" resultType="kh.cocoa.dto.SubjectDTO">
+		select * from subject where class_code=(select class_code from users where us_id=#{us_id}) order by seq desc
+	</select>
+	<update id="updateColor">
+		update subject set color=#{color} where seq=#{seq}
+	</update>
+	<insert id="createSubject">
+		insert into subject values(subject_seq.nextval,#{name},#{contents},#{color},#{class_code})
+	</insert>
+	<update id="updateSubject">
+		update subject set name=#{name},contents=#{contents},class_code=#{class_code} where seq=#{seq}
+	</update>
+	<delete id="deleteSubject">
+		delete from subject where seq=#{seq}
+	</delete>
+	
+	<!-- myHwSubmitView.jsp 내 과제 - 과제목록을 작성자 id로 불러옴 -->
+	
+	<select id="my_hw_submitList"
+		resultType="kh.cocoa.dto.Hw_ViewDTO">
+		select * from hw_view where list_seq is not null and subject_seq in (select seq from subject where class_code=(select class_code from users where us_id=#{us_id})) order by end_date
+	</select>
+	<select id="getWrite_date" resultType="java.sql.Date">
+		select write_date from hw_submit where writer_id=#{writer_id} and
+		list_seq=#{list_seq}
+	</select>
+	
+	<!-- NAV PAGINATION MySubmit -->
+	<select id="countAllMySubmit" resultType="Integer">
+		select count(*) from HW_VIEW where list_seq is not null and subject_seq in (select seq from subject where class_code=(select class_code from users where us_id=#{us_id}))
+	</select>
+	<select id="mySubmitSelectByCpage" resultType="kh.cocoa.dto.Hw_ViewDTO">
+		select * from(select HW_VIEW.*,row_number()over(order by LIST_SEQ desc)rn from HW_VIEW where list_seq is not null and subject_seq in (select seq from subject where class_code=(select class_code from users where us_id=#{us_id}))) where rn between #{startRowNum} and #{endRowNum}
+	</select>
+	
+		<!-- hwListView.jsp -->
+  	<select id="getHwViewBySubjectSeq" resultType="kh.cocoa.dto.Hw_ViewDTO">
+  		<![CDATA[select*from HW_VIEW where SUBJECT_SEQ = #{subject_seq} and ROWNUM <= '1']]>
+  	</select> 
+  	<select id="getSubjectContents" resultType="String">
+  		select contents from subject where seq=#{subject_seq}
+  	</select>
+  	
+  	<select id="hwListBySubject" resultType="kh.cocoa.dto.Hw_ListDTO">
+  		select*from hw_list where subject_seq=#{subject_seq} order by seq desc
+  	</select>
+  	
+  	<select id="hwListTitleBySeq" resultType="String">
+  		select title from hw_list where seq=#{seq}
+  	</select>
+  	
+  	<!-- 과제 제출 게시판 hwSubmitView -->  	
+  	<select id="getHwViewByListSeq" resultType="kh.cocoa.dto.Hw_ViewDTO">
+  		select*from hw_view where list_seq = #{list_seq}
+  	</select>
+  	
+  	<select id="allSubmitUS_ID" resultType="String">
+  		select WRITER_ID from HW_SUBMIT where list_seq = #{list_seq}
+  	</select>
+  	
+  	<select id="mySubmitDTO" resultType="kh.cocoa.dto.Hw_SubmitDTO">
+  		select*from HW_SUBMIT where WRITER_ID=#{writer_id} and list_seq=#{list_seq}
+  	</select>
+  	
+  	<!-- NAV PAGINATION SUBMIT -->
+  	
+  	<select id="getAllPageCount" resultType ="Integer">
+  		select count(*) from hw_submit where list_seq=#{list_seq}
+  	</select>
+	
+	<select id="countSubmitBySearch" resultType="Integer">
+		select count(*) from hw_submit where list_seq=#{list_seq} and (${searchBy} like '%'|| #{search} ||'%')
+	</select>
+	
+	<!-- 쿼리문 괜찮은가 : many where -->
+	<select id="submitSelectByCpage" resultType="kh.cocoa.dto.Hw_SubmitDTO">
+		select * from(select hw_submit.*,row_number()over(order by write_date desc)rn from hw_submit) where (list_seq = #{list_seq}) and (rn between #{startRowNum} and #{endRowNum})
+	</select>
+	
+	<select id="submitSelectByCpageSearch" resultType="kh.cocoa.dto.Hw_SubmitDTO">
+		select * from (select hw_submit.*, row_number() over(order by write_date desc) rn from hw_submit where (list_seq = #{list_seq}) and (${dto.searchBy} like '%'|| #{dto.search} ||'%')) and (rn between #{startRowNum} and #{endRowNum})
+	</select>
+	
+	<!-- [PROF] pHwListView.jsp : add,modify,delete of the list -->
+	<insert id="addHwList">
+		insert into HW_LIST values(HW_LIST_SEQ.nextval,#{title},#{contents},sysdate,#{end_date},#{subject_seq})
+	</insert>
+	
+	<update id="modiHwList" parameterType="kh.cocoa.dto.Hw_ListDTO">
+		update HW_LIST set 
+		title=#{title},contents=#{contents},end_date=#{end_date} 
+		where seq=#{seq}
+	</update>
+	
+	<delete id="delHwList">
+		delete from HW_LIST where SEQ = #{seq}
+	</delete>
+	
+	<!-- [PROF] pHwSubmitView.jsp -->
+	<select id="getHwListOne" resultType="kh.cocoa.dto.Hw_ListDTO">
+		select*from HW_LIST where seq=#{list_seq}
+	</select>
+  	
+	
+	  	<!-- hwSubmitCreate --> 
+  	<insert id="insertSubmit">
+  		insert into hw_submit values(#{seq},#{title},#{contents},sysdate,#{writer_id},#{list_seq},0)
+  	</insert>
+  	<select id="selectSeq" resultType="Integer">
+  		select HW_SUBMIT_SEQ.NEXTVAL FROM USER_SEQUENCES WHERE SEQUENCE_NAME= 'HW_SUBMIT_SEQ'
+  	</select>
+  	
+  	<!-- hwSubmitRead --> 
+  	<select id="getHwSubmitBySeq" resultType="kh.cocoa.dto.Hw_SubmitDTO">
+  		select * from hw_submit where seq=#{seq}
+  	</select>
+  	
+  	<!-- hwSubmitUpdate --> 
+  	<update id="updateSubmit">
+  		update hw_submit set title=#{title},contents=#{contents} where seq=#{seq}
+  	</update>
+  	<!-- 과제 수정시 제목이랑 내용을 ajax로 불러오기  -->
+   <select id="getUpdateContents" resultType="String">
+      select contents from hw_submit where seq =#{seq}
+   </select>
+  	
+  	<!-- hwSubmitDelete --> 
+  	<delete id="deleteSubmit">
+  		delete from hw_submit where seq = #{seq}
+  	</delete>
+  	
+  	<!-- 20201224 이후 추가할 것 -->
+  	<!-- [PROF/Stud] hwSubmitRead -->   	
+  	<update id="increaseView">
+		update hw_submit set view_count=view_count+1 where seq=#{seq}
+	</update>
+  	<!-- [PROF] pHwSubmitView.jsp -->
+  	<!-- select list of notice submits -->
+  	<!--<select id="getNotice" resultType="kh.cocoa.dto.Hw_SubmitDTO">
+  		select*from HW_SUBMIT where WRITER_ID=#{prof_id} and LIST_SEQ = #{list_seq}
+  	</select>-->
+  	
+  	<select id="getNoticeBySeq" resultType="kh.cocoa.dto.Hw_SubmitDTO">
+	  	SELECT  H.SEQ, H.TITLE, H.CONTENTS, H.WRITE_DATE, H.WRITER_ID, H.LIST_SEQ, H.VIEW_COUNT, U.ROLE, U.NAME
+		FROM HW_SUBMIT H, USERS U
+		WHERE writer_id = us_id AND U.ROLE=2 AND LIST_SEQ=#{list_seq}
+  	</select>
+  	<!-- students list in this Hw_list -->
+	<select id="stdInThisHw" resultType = "kh.cocoa.dto.Std_ViewDTO">
+		select*from STD_VIEW where class_code=#{class_code} order by NAME
+	</select>
+	<!-- [PROF] pHwListView.jsp -->
+	<!-- count submitted list without prof's -->
+	<select id="howManySubmits" resultType = "Integer">
+		select count(*) from hw_submit where list_seq = #{list_seq} and writer_id not like #{writer_id}
+	</select>
+	<!-- count total students in this class -->
+	<select id="getTotalStd" resultType="Integer">
+		select count(*) from std_view where class_code = #{class_code}
+	</select>
+	
+  	
+  </mapper>

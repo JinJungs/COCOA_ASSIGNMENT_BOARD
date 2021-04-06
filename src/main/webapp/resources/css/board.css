@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+* {
+   margin: 0;
+}
+
+a {
+   text-decoration: none;
+   color: black;
+}
+
+.boardH-container {
+   padding: 10px;
+}
+
+.boardH-block{
+   padding: 10px;
+   border-bottom: 0.5px solid darkgray;
+}
+
+.boardH-grid-container {
+   display: grid;
+   grid-template-columns: repeat(13, 65px);
+   grid-template-areas:
+      'title title title title title title title title title title title viewCount writer writer'
+      'contents contents contents contents contents contents contents contents contents contents contents date date date';
+   grid-gap: 3px;
+   margin: auto;
+}
+
+.boardH-grid-container>div {
+   text-align: left;
+   padding-left: 5px;
+   padding-right: 5px;
+   padding-top: 3px;
+   padding-bottom: 3px;
+}
+.boardH-title {
+   grid-area: title;
+   font-size: 1.3rem;
+}
+
+.boardH-viewCount{
+   grid-area: viewCount;
+   font-size: 1.1rem;
+   margin: auto;
+}
+
+.boardH-writer {
+   grid-area: writer;
+   font-size: 1.1rem;
+   margin: auto;
+}
+
+.boardH-contents {
+   grid-area: contents;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+
+.boardH-contents>a{
+   color: gray;
+}
+
+.boardH-date {
+   grid-area: date;
+   padding-left: 50px;
+   margin-left: 50px;
+}
+
+.boardH-date>a {
+   grid-area: date;
+   color: gray;
+}
+
+.boardH-grid-container .writer {
+   text-align: center;
+}
+
+.boardH-navi {
+   text-align: center;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.boardH-search {
+   text-align: center;
+   width: 100%;
+   margin: auto;
+}
+
+.boardH-search>form {
+   display: block;
+}
+
+.boardH-search>form>#searchtext {
+   width: 300px;
+}
+
+#boardH-home {
+   font-size: 1rem;
+   float: right;
+   margin-top: 10px;
+}
+
+#boardH-writing {
+   font-size: 1rem;
+   float: right;
+   margin-top: 10px;
+   margin-left: 10px;
+}
+
+.boardW-title {
+   grid-area: title;
+}
+
+.boardW-contents {
+   grid-area: contents;
+   border: 2px solid black;
+}
+
+.boardW-file {
+   grid-area: file;
+}
+
+.boardW-submit {
+   grid-area: submit;
+}
+
+.boardW-grid-container {
+   display: grid;
+   grid-template-areas: 'title' 'contents' 'file' 'submit';
+   padding: 20px 20px 5px 20px;
+}
+
+#boardW-title {
+   border: 1px solid #c8c8c8;
+   width: 100%;
+   font-size: 1.5rem;
+   padding: 5px;
+}
+
+#boardW-contents {
+   border: 2px solid black;
+   width: 100%;
+   height: 500px;
+   font-size: 1rem;
+   margin-top: 10px;
+   padding: 5px;
+}
+
+#boardW-file {
+   margin-top: 5px;
+}
+
+.boardW-submit {
+   text-align: right;
+}
+
+#boardW-submit {
+   padding: 2px;
+}
+
+#boardW-back {
+   padding: 2px;
+}
+
+.note-frame {
+   border: 2px solid black;
+}
+.card-header{
+   border: 1px solid black;
+}
+.card-block{
+   border: 1px solid black;
+   border-top: none;
+}

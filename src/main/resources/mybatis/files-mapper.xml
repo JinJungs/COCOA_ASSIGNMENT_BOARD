@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Files">
+	<insert id="insertFiles_Board">
+		INSERT INTO FILES_BOARD VALUES(FILES_BOARD_SEQ.NEXTVAL, #{dto.oriname}, #{dto.savedname}, SYSDATE, #{seqN})
+	</insert>
+	
+	<select id="selelctFiles_Board" resultType="kh.cocoa.dto.FilesDTO">
+		SELECT * FROM FILES_BOARD WHERE BOARD_SEQ=#{boardSeq}
+	</select>
+	<select id="getDownLoadList" resultType="kh.cocoa.dto.FilesDTO">
+		select * from files_board where board_seq=#{sub_hw_seq}
+	</select>
+  	<insert id="insertFiles">
+		insert into files_board values(files_board_seq.nextval,#{oriname},#{savedname},sysdate,#{sub_hw_seq})
+	</insert>
+	 <select id="getFilesName" resultType="kh.cocoa.dto.FilesDTO">
+  		select * from files_board where seq=#{seq}
+  	</select>
+  	<select id="isExistUploadFile" resultType="Integer">
+  		select count(*) from files_board where board_seq=#{sub_hw_seq}
+  	</select>
+  	<delete id="delFile">
+  		delete from files_board where seq =#{seq}
+  	</delete>
+ 
+
+  	<!--지영씨  -->
+  	  <insert id="insertUserFile">
+      insert into files_profile values(files_seq.nextval,#{oriname},#{savedname},sysdate,#{users_id})
+   </insert>
+   <!-- 파일 가져오기  -->
+   <select id="getUserImage" resultType="kh.cocoa.dto.FilesDTO">
+      select * from files_profile where us_id=#{us_id}
+      <!--select max(seq),us_id from files_profile where us_id='qwe' group by us_id;  -->
+   </select>
+   <select id="isExistFile" resultType="Integer">
+      select count(*) from files_profile where us_id=#{us_id}
+   </select>
+   <delete id="delProfileFile">
+   		delete from files_profile where us_id=#{users_id} and savedname!=#{savedname}
+   </delete> 
+   
+   	<!-- Hw -->
+  	<insert id="insertHwFiles">
+		insert into files_hw values(files_hw_seq.nextval,#{oriname},#{savedname},sysdate,#{sub_hw_seq})
+	</insert>
+	<select id="getHwFilesBySeq" resultType="kh.cocoa.dto.FilesDTO">
+		select * from files_hw where submit_seq=#{sub_hw_seq}
+	</select>
+	<delete id="deleteHwFiles">
+		delete from files_hw where seq=#{seq}
+	</delete>
+</mapper>

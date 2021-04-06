@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Users">
+
+	<!-- get all informations of the user by us_id -->
+	<select id="getUserInfo" resultType="kh.cocoa.dto.UsersDTO">
+		select*from USERS where
+		US_ID=#{us_id}
+	</select>
+	<!-- get Professor's name of the user by us_id -->
+	<select id="getProfName" resultType="String">
+		select NAME from USERS where
+		CLASS_CODE=#{classCode} and ROLE='2'
+	</select>
+	<!-- Check if us_id & pw is correct -->
+	<select id="isPwCorrect" resultType="Integer">
+		select count(*) from USERS
+		where US_ID=#{us_id} and PW=#{pw}
+	</select>
+
+	<!-- How many people in this class ? -->
+	<select id="stdNumInClass" resultType="Integer">
+		select count(*) from users
+		where CLASS_CODE = #{class_code} and role = '1'
+	</select>
+	<!--지영 -->
+
+	<!-- ==================== 로그인 ==================== -->
+	<!-- Login 시 탈퇴했는지 여부 -->
+   <select id="withdraw" resultType="String">
+      select withdraw from users where us_id = #{us_id}
+   </select>
+	<!-- Login 성공 여부 -->
+	<select id="login" resultType="String">
+		select pw from users where us_id = #{us_id}
+	</select>
+
+	<!-- 탈퇴시, Login 성공 여부 -->
+	<select id="login2" resultType="String">
+		select pw from users where us_id = #{us_id}
+	</select>
+	<!-- 학생/강사 로그인 후 페이지 분류를 위한 role 정보 불러오기 -->
+	<select id="role" resultType="String">
+		select role from users where us_id = #{us_id}
+	</select>
+	<!-- ==================== 회원가입 ==================== -->
+	<!-- 회원가입 학생 -->
+	<insert id="insertStd">
+		insert into users
+		values(#{us_id},users_seq.nextVal,#{pw},#{name},#{email},#{phone},default,01,1001) <!--시연을 위한 임시값  -->
+	</insert>
+	<!-- 회원가입 강사 -->
+	<insert id="insertLec">
+		insert into users
+		values(#{us_id},users_seq.nextVal,#{pw},#{name},#{email},#{phone},default,#{role},0)
+	</insert>
+	<!-- ==================== ID중복체크 ==================== -->
+	<!-- ID 중복체크 / 학생 -->
+	<select id="isIdExist" resultType="boolean">
+		select count(*) from users where us_id = #{value}
+	</select>
+	<!-- ID 중복체크 / 강사 -->
+	<select id="isIdExistLec" resultType="boolean">
+		select count(*) from users where us_id = #{value}
+	</select>
+
+	<!-- ==================== 마이페이지 / 학생 ==================== -->
+
+
+	<!-- 학생 정보 불러오기 -->
+	<select id="mypageStd" resultType="kh.cocoa.dto.UsersDTO">
+		select * from users where us_id=#{us_id}
+	</select>
+	<!-- 학생 정보 불러오기 -->
+	<select id="mypageStd2" resultType="kh.cocoa.dto.ClassDTO">
+		select * from (select u.us_id, c.name from users u, class c where
+		c.code=u.class_code) where us_id = #{us_id}
+	</select>
+	<!-- 학생 정보 수정 -->
+	<update id="stdModifyInfor">
+		<choose>
+			<when test="pw!=null">
+				update users set pw=#{pw}, email = #{email}, phone = #{phone} where us_id
+				= #{us_id}
+			</when>
+			<otherwise>
+				update users set email = #{email}, phone = #{phone} where us_id = #{us_id}
+			</otherwise>
+		</choose>
+
+	</update>
+
+	<!-- ==================== 마이페이지 / 강사 ==================== -->
+	<!-- 강사 정보 불러오기 -->
+	<select id="mypageLec" resultType="kh.cocoa.dto.UsersDTO">
+		select * from users where us_id = #{us_id}
+	</select>
+	<!-- 강사 정보 수정 -->
+	<update id="lecModifyInfor">
+		update users set pw=#{pw}, email = #{email}, phone = #{phone} where us_id =
+		#{us_id}
+	</update>
+
+	<!-- ==================== 회원 탈퇴 / 학생 ==================== -->
+
+	<!-- 회원 정보 삭제 -->
+	<update id="delete">
+		update users set withdraw='Y' where us_id=#{us_id}
+	</update>
+	<!-- ==================== 아이디 찾기 ==================== -->
+	<!-- 아이디 찾기 분실시 -->
+	<!--용국 -->
+	<select id="checkCurPw" resultType="String">
+		select pw from users where us_id = #{us_id}
+	</select>
+	<select id="checkAuthId" resultType="Integer">
+		select count(*) from auth where auth_id =#{auth_id}
+	</select>
+	<select id="isUsedAuthId" resultType="Integer">
+		select count(*) from auth
+		where users_id is not null and auth_id =#{auth_id}
+	</select>
+	<update id="updateAuthUserId">
+		update auth set users_id = #{us_id} where auth_id
+		=#{auth_id}
+	</update>
+	<select id="getLecname" resultType="kh.cocoa.dto.UsersDTO">
+		select  * from users where
+		role=2 and class_code = #{class_code}
+	</select>
+	<select id="getFindId" resultType="kh.cocoa.dto.UsersDTO">
+		select * from users where email=#{email}
+	</select>
+
+
+	<!-- ================================================ HW PART (added after 
+		2020 12 24) ================================================ -->
+
+	<select id="getClassCodeById" resultType="Integer">
+		select class_code from
+		users where us_id=#{us_id}
+	</select>
+	<select id="getProfId" resultType="String">
+		select us_id from USERS where
+		CLASS_CODE = #{class_code} and role = '2'
+	</select>
+	<!-- ADDED -->
+	<select id="getName" resultType="String">
+		select NAME from USERS where
+		US_ID = #{writer_id}
+	</select>
+	   <!-- ==================== 비번찾기 ==================== -->
+<!-- 비번찾기 비밀번호 업뎃 -->
+   <update id="updateUserPw">
+      update users set pw=#{pw} where email = #{email}
+   </update>
+	
+	<!--nex -->
+	<select id="selectCountById" resultType="boolean">
+		select count(*) from users where us_id=#{id}
+	</select>
+
+	<select id="selectById" resultType="kh.cocoa.dto.UsersDTO">
+		select * from users where us_id=#{id}
+	</select>
+
+	<update id="updatePw">
+		update users set pw=#{pw} where us_id=#{dto.us_id}
+	</update>
+
+	<select id="getProfList" resultType="kh.cocoa.dto.UsersDTO">
+		select * from users where role=2
+	</select>
+
+	<select id="getStudList" resultType="kh.cocoa.dto.UsersDTO">
+		select * from users where role=1
+	</select>
+
+	<select id="getUsersList" resultType="kh.cocoa.dto.UsersDTO">
+		select * from users where role!=3
+	</select>
+
+	<delete id="usersDelete">
+		<foreach item="i" collection="list" open="DECLARE BEGIN"
+			close="; END;" separator=";">
+			update users set pw='-', name='-', email='-', phone='-', class_code=0 where
+			us_id=#{i.us_id}
+		</foreach>
+		<!-- seq, us_id, role -->
+	</delete>
+
+	<select id="getUnregProfList" resultType="kh.cocoa.dto.UsersDTO">
+		select * from users where class_code=0 and role=2
+	</select>
+
+	<select id="getUnregStudList" resultType="kh.cocoa.dto.UsersDTO">
+		select * from users where class_code=0 and role=1
+	</select>
+
+	<select id="getUnregUsersList"
+		resultType="kh.cocoa.dto.UsersDTO">
+		select * from users where class_code=0 and role!=3
+	</select>
+
+	<update id="usersUpdate">
+		<foreach item="i" collection="list" open="DECLARE BEGIN"
+			close="; END;" separator=";">
+			update users set withdraw=#{i.withdraw}, role=#{i.role},
+			class_code=#{i.class_code} where us_id=#{i.us_id}
+		</foreach>
+	</update>
+	   <!--비번찾기 이메일 확인  -->
+   <select id="isEmailExist" resultType="boolean">
+      select count(*) from users where email = #{email}
+   </select>
+
+	
+</mapper>

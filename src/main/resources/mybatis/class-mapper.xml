@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Class">
+	<select id="getClassName" resultType="String">
+		select name from CLASS
+		where code=#{classCode}
+	</select>
+	<select id="getClassList" resultType="kh.cocoa.dto.ClassDTO">
+		select * from class
+	</select>
+
+	<insert id="insertClass">
+		insert into class values (#{code},#{name},#{start_date},#{end_date})
+	</insert>
+
+	<delete id="deleteClass">
+		delete from class where code in
+		<foreach item="i" collection="list" open="(" close=")"
+			separator=",">
+			#{i.code}
+		</foreach>
+	</delete>
+
+	<update id="classUpdate">
+		<foreach item="i" collection="list" open="DECLARE BEGIN"
+			close="; END;" separator=";">
+			update class set name=#{i.name}, start_date=#{i.start_date},
+			end_date=#{i.end_date} where code=#{i.code}
+		</foreach>
+	</update>
+
+
+</mapper>

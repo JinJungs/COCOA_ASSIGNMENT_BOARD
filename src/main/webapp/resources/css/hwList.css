@@ -1,0 +1,422 @@
+@charset "UTF-8";
+/* * {
+  box-sizing: border-box;
+} */
+a {
+  text-decoration: none;
+}
+/* .subjectContents {
+  占쏙옙占쎈룴癰귣 諭  占쎄퉳繹먮뗄 뱽 占쎈뎡占쎌뵬揶쏉옙野껓옙 占쎈막 占쎈땾占쎈즲 占쎌뿳占쎈뼄.
+  background-color: var(--text-secondary);
+  margin-bottom: 3rem;
+  padding: 1rem;
+} */
+
+/* XMP용 */
+/* XMP용 */
+.titleXmp{
+   justify-items: left;
+   text-overflow: ellipsis;
+   white-space:nowrap; overflow:hidden;
+   width: 530px;
+}
+.xmpsubmit{
+    font-size: 1vw;
+    white-space: normal;
+}
+
+/* hwList ======================== */
+.list-container{
+   max-width: 59rem;
+    min-width: 780px;
+    width: 85vw;
+}
+.hwList-lh-pro {
+  grid-template-columns: 6fr 1fr 1fr 1fr 1fr;
+}
+.listHead {
+  background-color: var(--main-color);
+  color: var(--text-secondary);
+  display: grid;
+  padding: 0.2rem;
+  font-weight: 400;
+  border-radius: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+.hDate,
+.hOx,
+.date,
+.ox,
+.assgined,
+.empty,
+.hCrud,
+.crud {
+  justify-self: center;
+}
+
+
+
+.listContents {
+  display: grid;
+  grid-auto-rows: 3.5rem;
+}
+.hwList-li-pro {
+  grid-template-columns: 6fr 1fr 1fr 1fr 1fr;
+}
+.listItem {
+  border: 1px solid var(--text-secondary);
+  border-radius: 0.2rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+  margin: 0.1rem 0;
+}
+.listItem:hover {
+  background-color: var(--text-secondary);
+}
+.listHead:first-child,
+.title {
+  justify-items: left;
+  padding-left: 0.8rem;
+}
+.date {
+  font-size: 0.7rem;
+}
+#x {
+  color: red;
+}
+#o {
+  color: green;
+}
+/* img {
+  height: 2rem;
+  width: 2rem;
+  display: block;
+} */
+.footer {
+  height: 3.5rem;
+}
+
+/* ============hwSubmitView================ */
+/* hwLabel */
+.hwLabel {
+  word-break: break-all;
+  display: grid;
+  grid-template-columns: 3fr 7fr 4fr;
+  /* grid-gap: 1rem; */
+  background-color: var(--text-secondary);
+  min-height: 7rem;
+  max-height: fit-content;
+  margin-bottom: 2rem;
+  border-radius: 0.2rem;
+}
+.hwLabelItem {
+  height: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.hwLabelSubject {
+  /* label with color */
+  background-color: var(--main-color);
+  color: var(--text-secondary);
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+  font-size: 2rem;
+}
+.hwLabelSubjectXmp{
+	color: var(--text-secondary);
+  border-top-left-radius: 0.2rem;
+  border-bottom-left-radius: 0.2rem;
+  font-size: 2rem;
+}
+.hwLabelContents {
+  display: block;
+}
+.hwLabelContents > h3 {
+  margin-bottom: 0.3rem;
+}
+.hwLabelBtns {
+  justify-self: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-end;
+}
+
+.hwLabelBtns > .btn {
+  margin-right: 3px;
+  padding: 7px;
+  flex-shrink: 1;
+}
+
+.ox {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-weight: bold;
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+#x {
+  color: red;
+}
+#o {
+  color: green;
+}
+
+.hwSearch {
+  margin-bottom: 1rem;
+}
+
+/*  ⑥눘 젫 占쎌젫 빊占  野껊슣 뻻占쎈솇 */
+/* hwList 뀎怨쀯옙 野껊  뒄占쎈뮉 野껓옙 占쎌젟 뵳占  占쎈툡占쎌뒄 */
+.hwSubmit-lh-pro {
+  grid-template-columns: 1fr 8fr 2fr 2fr 1fr;
+}
+
+.hwSubmit-li-pro {
+  grid-template-columns: 1fr 8fr 2fr 2fr 1fr;
+}
+
+.submitMsg {
+  display: flex;
+  justify-content: center;
+}
+
+.listOnTop {
+  background-color: beige;
+}
+
+.hSeq,
+.hWriter,
+.hView,
+.seq,
+.writer,
+.view {
+  justify-self: center;
+}
+
+.submitListContents > .listContents {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 3.5rem);
+}
+
+.boardPages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  height: 4rem;
+}
+
+.boardPages > a {
+  color: var(--text-primary);
+  margin: 1rem;
+}
+.boardPages > a:hover {
+  color: var(--main-color);
+}
+
+/* PROFESSOR ================================*/
+.btnSubjectEdit {
+  font-size: 1.5rem;
+  width: 2rem;
+  border: none;
+  /* float: right; */
+}
+.hwLabelEdit {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-self: right;
+}
+.modifySubject {
+  display: flex;
+  justify-content: flex-end;
+}
+.btnAddHw {
+  height: 3rem;
+  border: none;
+  font-weight: semi-bold;
+  font-size: 3rem;
+}
+
+.hwListProf-li-pro {
+  grid-template-columns: 1fr 6fr 1fr 1fr 1fr;
+}
+.crud {
+  display: flex;
+  flex-wrap: wrap;
+}
+.btnCrud {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-weight: bold;
+  color: #c9c9c9;
+  margin: 1.5px;
+  background: transparent;
+  border: none;
+}
+.btnCrud:hover {
+  color: #f05151;
+}
+
+#hwLabelProf {
+  margin-bottom: 1rem;
+}
+
+/* ====================MODAL===================== */
+.modal,
+.modal2 {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal--hidden,
+.modal2--hidden {
+  display: none;
+}
+.modal__close-bar,
+.modal2__close-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: -2rem;
+  margin=top: -1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+.modal__contents {
+  height: 70%;
+  width: 70%;
+  max-width: 600px;
+  min-width: 450px;
+  min-height: 600px;
+  max-height: 700px;
+  background-color: #eeeeee;
+  padding: 2rem 4rem;
+}
+.modal__form {
+  height: 100%;
+  width: 100%;
+  /* grid-template-rows: 0.8fr 1fr 0.8fr 1fr 0.8fr 6fr 1fr; */
+}
+.mo_row1 {
+  display: flex;
+  width: 100%;
+  height: 25%;
+}
+.mo_col1 {
+  width: 65%;
+  margin-right: 5px;
+}
+.mo_row2 {
+  height: 55%;
+}
+.mo_row3 {
+  height: 10%;
+}
+.widthFull {
+  width: 100%;
+}
+.height50px {
+  height: 50px;
+}
+.height80 {
+  height: 80%;
+}
+.heightFull {
+  height: 100%;
+}
+.modal__contents > input {
+  width: 100%;
+  /* height: 50px; */
+}
+.modal__form > textarea {
+  width: 100%;
+  height: 100%;
+  /* height: 250px; */
+}
+.hwSubmitBtn {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  background-color: var(--main-color);
+  border: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.hwSubmitBtn:hover {
+  background-color: palevioletred;
+}
+
+/*===NOTICE, MySubmit ON TOP OF THE LIST===*/
+.submits {
+  display: grid;
+  grid-auto-rows: 2rem;
+}
+.listOnTop {
+  background-color: #3a6cca15;
+}
+.noticeOnTop {
+  background-color: #3a6cca40;
+}
+.nobg{
+   background-color: transparent !important;
+   border: 2px solid #c8c8c8 !important;
+   color: #c8c8c8 !important;
+}
+
+/* ======TAB DESIGN pHwSubmitView.jsp */
+input[type="radio"] {
+  display: none;
+}
+/* put in jsp page to change color */
+/* input[type="radio"] + label {
+  display: inline-block;
+  padding: 7px;
+  background-color: #ccc;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: 2px 2px 0 0;
+}
+input[type="radio"]:checked + label {
+  background: ${hwView.color};
+  color: #000;
+} */
+.conbox {
+  width: 100%;
+  display: none;
+  padding-bottom: 50px;
+}
+input[id="tab01"]:checked ~ .con1 {
+  display: block;
+}
+input[id="tab02"]:checked ~ .con2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.stdSubmit-li-pro {
+  grid-template-columns: minmax(50px, 2fr) minmax(100px,3fr) 1fr;
+  grid-gap: 10px;
+}
+.stdSubmit-container {
+  width: 49%;
+}
+.stdMargin{
+   margin-right: 2%;
+}
+.h-stdSubmit,
+.stdSubmit {
+}
+

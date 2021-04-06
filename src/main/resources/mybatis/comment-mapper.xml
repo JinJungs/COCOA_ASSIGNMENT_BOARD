@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="Comment">
+  	<insert id="addComment">
+  		insert into comment_list values(comment_seq.nextval,#{contents},default,#{board_seq},#{writer_id})
+  	</insert>
+  		<insert id="addCommentDepth1">
+  		insert into comment_list2 values(comment_seq2.nextval,#{contents},default,#{comment_seq},#{writer_id},default)
+  	</insert>
+  	<insert id="addCommentDepth2">
+  		insert into comment_list2 values(comment_seq2.nextval,#{contents},default,#{comment_seq},#{writer_id},#{parent_seq})
+  	</insert>
+	<!--부모 이름 가져오기  -->
+	<select id="getParentId" resultType="String">
+		select writer_id from comment_list2 where seq =#{seq}
+	</select>
+	<select id="getParentIdTop" resultType="String">
+		select writer_id from comment_list where seq =#{seq}
+	</select>
+  	<select id="getCommentList" resultType="kh.cocoa.dto.CommentsDTO">
+  		select * from comment_list where board_seq = #{seq} order by write_date
+  	</select>
+  	<select id="getCommentListDepth2" resultType="kh.cocoa.dto.CommentsDTO">
+  		select * from comment_list2 where comment_seq =#{comment_seq} order by write_date
+  	</select>
+  	<!-- 댓글 수  -->
+  	<select id="getCommnetCount" resultType="Integer">
+  		select count(*) from comment_list cl1 inner join comment_list2 cl2 on cl1.seq=cl2.comment_seq where cl1.board_seq=#{board_seq}
+  	</select>
+  	<select id="getChildCommentCount" resultType="Integer">
+  		select count(*) from comment_list2 where comment_seq=#{seq}
+  	</select>
+  	<select id="getModContents" resultType="String">
+  		select contents from comment_list where seq = #{comment_seq}
+  	</select>
+  	<select id="getSubModContents" resultType="String">
+  		select contents from comment_list2 where seq = #{comment_seq}
+  	</select>
+  	<update id="modCommnet">
+  		update comment_list set contents=#{contents} where seq=#{seq}
+  	</update>
+  	<delete id="delComment">
+  		delete from comment_list where seq=#{seq}
+  	</delete>
+  	<update id="subModComment">
+  		update comment_list2 set contents=#{contents} where seq=#{seq}
+  	</update>
+  	<delete id="subDelComment">
+  		delete from comment_list2 where seq=#{seq}
+  	</delete>
+  	<!--권한  -->
+  	<select id="isAuthComment" resultType="Integer">
+  		select count(*) from comment_list where seq=#{seq} and writer_id=#{writer_id}
+  	</select>
+  	<select id="isAuthSubComment" resultType="Integer">
+  		select count(*) from comment_list2 where seq=#{seq} and writer_id=#{writer_id}
+  	</select>
+  </mapper>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="Board">
+    <select id="selectOne" resultType="kh.cocoa.dto.BoardDTO">
+  		select * from board where seq = #{seq}
+  	</select>
+  	<select id="getModBoardContents" resultType="String">
+  		select contents from board where seq = #{seq}
+  	</select>
+  	<select id="isAuthBoard" resultType="Integer">
+  		select count(*) from board where seq=#{seq} and writer_id=#{writer_id}
+  	</select>
+  	<select id="isExistReadpage" resultType="Integer">
+  		select count(*) from board where seq=#{seq}
+  	</select>
+  	<delete id="delBoard">
+  		delete from board where seq = #{seq}
+  	</delete>
+
+  	<update id="modBoardContents">
+  		update Board set contents=#{contents}, title=#{title} where seq=#{seq}
+  	</update>
+  	
+  	<select id="getWriterId" resultType="String">
+  		select writer_id from board where seq =#{seq}
+  	</select>
+  	
+  	
+  	<!--효경  -->
+	<select id="selectBoard" resultType="kh.cocoa.dto.BoardDTO">
+  		SELECT * FROM BOARD ORDER BY SEQ DESC
+  	</select>
+	
+	<select id="selectViewCount" resultType="Integer">
+      SELECT VIEW_COUNT FROM BOARD WHERE SEQ=#{seq}
+   </select>
+
+	<update id="updateViewCount">
+		UPDATE BOARD SET VIEW_COUNT=#{viewCount} WHERE SEQ=#{seq}
+	</update>
+	
+	<select id="selectBoardDTO" resultType="kh.cocoa.dto.BoardDTO">
+		SELECT * FROM BOARD WHERE SEQ=#{seq}
+	</select>
+	
+	<insert id="insertBoard">
+		INSERT INTO BOARD VALUES(#{seqN}, #{dto.title}, #{dto.contents}, SYSDATE, 0, #{dto.writer_id})
+	</insert>
+	
+	<select id="selectSeq" resultType="Integer">
+		SELECT BOARD_SEQ.NEXTVAL FROM USER_SEQUENCES WHERE SEQUENCE_NAME='BOARD_SEQ'
+	</select>
+	
+	<select id="selectMyBoard" resultType="kh.cocoa.dto.BoardDTO">
+		SELECT * FROM BOARD WHERE WRITER_ID=#{us_id} ORDER BY SEQ DESC
+	</select>
+	
+	 <select id="selectBoardSeq" resultType="Integer">
+      SELECT DISTINCT COMMENT_LIST.BOARD_SEQ FROM COMMENT_LIST, COMMENT_LIST2 
+          WHERE (COMMENT_LIST2.WRITER_ID=#{writer} OR COMMENT_LIST.WRITER_ID=#{writer})
+   </select>
+	
+	<select id="selectBoardList" resultType="kh.cocoa.dto.BoardDTO">
+		SELECT * FROM BOARD WHERE SEQ IN 
+		<foreach item="item" collection="list" separator="," open="(" close=")">
+			#{item}
+		</foreach>
+	</select>
+  </mapper>

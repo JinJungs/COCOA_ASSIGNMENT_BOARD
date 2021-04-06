@@ -1,0 +1,675 @@
+@charset "UTF-8";
+/*=========================== LOGIN.jsp */
+* {
+  transition: 0.5s;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+*.home {
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Lato", Arial, sans-serif;
+}
+
+.memberBody {
+  /* background-color: rgb(58, 108, 202); */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bg_gradation {
+  background-image: linear-gradient(45deg, rgb(58, 108, 202), rgb(13, 52, 122));
+}
+
+.bigcontainer {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.container {
+  padding: 50px;
+  width: 400px;
+  height: 600px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 8px rgb(65, 65, 65);
+}
+/*---------------header---------------*/
+.header {
+  width: 100%;
+  height: 30%;
+  color: black;
+  font-size: 30px;
+}
+/* Circle under the logo */
+.dot {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  width: 120px;
+  background-image: linear-gradient(45deg, rgb(58, 108, 202), rgb(13, 52, 122));
+  border-radius: 50%;
+}
+
+.dot > img {
+  width: 40px;
+  height: 50px;
+  z-index: 10;
+}
+
+/*---------------body---------------*/
+.body {
+  width: 100%;
+  height: 50%;
+}
+
+.id_box,
+.pw_box {
+  width: 100%;
+  height: 20%;
+  margin-bottom: 7%;
+}
+
+.id_box > input,
+.pw_box > input {
+  width: 100%;
+  height: 100%;
+  background-color: #ebebeb;
+  border: none;
+  padding: 10px;
+}
+/* ---Login Button---*/
+.login_box {
+  width: 100%;
+  height: 20%;
+}
+
+.login_box > button {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+/* ---CHECK BOX---*/
+.chk_box {
+  width: 100%;
+  height: 20%;
+  margin-bottom: 20px;
+}
+
+.cb {
+  /*체크 박스 안에, label이랑 한 묶음*/
+  margin-top: 3%;
+  text-align: right;
+  color: #c8c8c8;
+}
+/* BUTTONS : find pw, id, signup */
+.btn_box {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.btn_box > button {
+  flex: 1;
+  padding: 0;
+  margin: 0;
+}
+
+/*---------------footer---------------*/
+.footer {
+  width: 100%;
+  height: 10%;
+}
+
+/* Button */
+button {
+  padding: 5px;
+  background-color: rgb(58, 108, 202);
+  border: none;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+button:hover {
+  background-color: rgb(60, 98, 168);
+}
+
+/* ==================================joinAccount.jsp=== */
+/* another container size for this page */
+.join_container {
+  width: 700px;
+  height: 500px;
+  display: flex;
+  box-shadow: 0 5px 8px rgb(65, 65, 65);
+}
+/*---------------body---------------*/
+/* body1 : left, boy2 : right */
+.body1,
+.body2 {
+  width: 50%;
+  height: 100%;
+  flex-basis: 50%;
+  padding: 50px;
+  padding-top: 60px;
+}
+
+.body1 {
+  background-color: rgb(19, 55, 121);
+}
+
+.body2 {
+  background-color: #ffffff;
+}
+/* body Animation with hover */
+.body1:hover {
+  background-color: #527bc7;
+}
+
+.body2:hover {
+  background-color: #ffffff50;
+}
+
+/* text on top */
+.join_header {
+  width: 100%;
+  height: 20%;
+}
+
+.join_title {
+  font-size: 35px;
+  font-weight: 1000;
+  color: #c8c8c8;
+  margin-bottom: 8px;
+}
+
+.join_subtitle {
+  font-size: 12px;
+  color: #c8c8c8;
+  font-style: italic;
+}
+/* image on middle */
+.box1 {
+  width: 100%;
+  height: 55%;
+  display: flex;
+  align-items: center;
+}
+/* buttons on bottom */
+.box3 {
+  width: 100%;
+  height: 25%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.box3 > .btn_box {
+  width: 100%;
+  height: 80%;
+}
+
+/* fieldset {
+  border: 2px solid #fff;
+} */
+.img_box {
+  border: 1px solid #fff;
+  margin-top: 3%;
+  left: 30%;
+  width: 80%;
+  height: 80%;
+}
+
+.box1 > img {
+  width: 70%;
+  height: 80%;
+  margin: 0 auto;
+}
+
+.txt_box {
+  left: 10%;
+  width: 80%;
+  height: 10%;
+  text-align: center;
+}
+
+/* .btn_box {
+   margin-top: -1%;
+   left: 25%;
+   width: 50%;
+   height: 5%;
+} */
+
+/* ======================MY PAGE STUDENT------ */
+.my_bigcontainer {
+  display: flex;
+  min-height: 350px;
+  max-height: 450px;
+  min-width: 550px;
+  max-width: 700px;
+  height: 50vh;
+  width: 70vw;
+  border-radius: 3px;
+  box-shadow: 0 3px 5px rgb(178, 178, 178);
+  margin-bottom: 30px;
+  /* display: grid;
+  grid-template-columns: 3fr 7fr;
+  padding: 20px;
+  height: 100%;
+  border: 1px solid pink; */
+}
+
+.my_left {
+  width: 40%;
+  margin-right: 30px;
+  background-color: rgb(19, 55, 121);
+  padding: 20px;
+}
+
+.profile {
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+#image_container {
+  text-align: center;
+}
+
+.image_container {
+  width: 150px;
+  height: 150px;
+}
+
+.image_container > img {
+  width: 100%;
+  height: auto;
+  border: none;
+}
+
+.my_btn {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my_btn > button {
+  width: 80%;
+  height: 40%;
+  background-color: rgb(19, 55, 121);
+}
+
+.mypage_container {
+  margin-top: 30px;
+  height: 100%;
+  width: 60%;
+  display: grid;
+  grid-template-rows: repeat(6, 25px);
+  grid-template-columns: 2fr 5fr;
+  grid-row-gap: 30px;
+  grid-template-areas:
+    "txt1 input1" "txt2 input2" "txt3 input3"
+    "txt4 input4" "txt5 input5" "txt6 input6" "foot foot";
+}
+
+.mark {
+  width: 3px;
+  height: 100%;
+  background-color: var(--bg-primary);
+  margin-right: 5px;
+}
+/* txt 부분 공통 코드(색, 여백 등 지정) */
+.txt1,
+.txt2,
+.txt3,
+.txt4,
+.txt5,
+.txt6,
+.txt7,
+.txt8,
+.txt9 {
+  color: var(--text-primary);
+  line-height: 25px;
+  height: 100%;
+  width: 98%;
+  font-size: 0.5rem;
+  display: flex;
+}
+/* input 부분 공통 코드 */
+.input1,
+.input2,
+.input3,
+.input4,
+.input5,
+.input6,
+.imput7,
+.input8,
+.input9 {
+  color: var(--text-primary);
+  line-height: 25px;
+  height: 100%;
+  width: 98%;
+  font-size: 1rem;
+}
+
+.txt1 {
+  grid-area: txt1;
+}
+
+.txt2 {
+  grid-area: txt2;
+}
+
+.txt3 {
+  grid-area: txt3;
+}
+
+.txt4 {
+  grid-area: txt4;
+}
+
+.txt5 {
+  grid-area: txt5;
+}
+
+.txt6 {
+  grid-area: txt6;
+}
+
+.txt7 {
+  grid-area: txt7;
+}
+
+.txt8 {
+  grid-area: txt8;
+}
+
+.txt9 {
+  grid-area: txt9;
+}
+
+.input1 {
+  grid-area: input1;
+}
+
+.input2 {
+  grid-area: input2;
+}
+
+.input3 {
+  grid-area: input3;
+}
+
+.input4 {
+  grid-area: input4;
+}
+
+.input5 {
+  grid-area: input5;
+}
+
+.input6 {
+  grid-area: input6;
+}
+
+.input7 {
+  grid-area: input7;
+}
+
+.input8 {
+  grid-area: input8;
+}
+
+.input9 {
+  grid-area: input9;
+}
+
+/* .foot {
+  margin-top: 40px;
+  justify-self: center;
+  grid-area: foot;
+} */
+/* ===========================mypageModif */
+.my_upload {
+  display: inline-block;
+  width: 100%;
+  padding: 5%;
+  text-align: right;
+}
+
+.uploadInput {
+  width: 100%;
+  height: 40%;
+}
+
+.uploadBtn {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.white {
+  background-color: #fff;
+}
+
+.whiteColor {
+  color: #fff;
+}
+
+.smallfont {
+  font-size: 0.5rem;
+}
+
+.mypageModif_container {
+  padding-top: 10px;
+  height: 80%;
+  width: 100%;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-rows: repeat(8, 25px);
+  grid-template-columns: 2fr 5fr;
+  grid-row-gap: 20px;
+  grid-template-areas:
+    "txt1 input1" "txt2 input2" "txt3 input3"
+    "txt4 input4" "txt5 input5" "txt6 input6" "txt7 input7" "txt8 input8";
+}
+
+.foot {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#btnmodpw {
+  font-size: 0.4rem;
+  padding: 4px;
+}
+.myModif_bigcontainer {
+  display: flex;
+  min-height: 450px;
+  max-height: 600px;
+  min-width: 550px;
+  max-width: 750px;
+  height: 50vh;
+  width: 70vw;
+  border-radius: 3px;
+  box-shadow: 0 3px 5px rgb(148, 148, 148);
+  margin-bottom: 30px;
+  /* display: grid;
+  grid-template-columns: 3fr 7fr;
+  padding: 20px;
+  height: 100%;
+  border: 1px solid pink; */
+}
+
+.myModif_left {
+  width: 40%;
+  margin-right: 30px;
+  background-color: rgb(19, 55, 121);
+  padding: 20px;
+}
+.mypageProfModif_container {
+  padding-top: 20px;
+  height: 80%;
+  width: 100%;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-rows: repeat(9, 20px);
+  grid-template-columns: 2fr 5fr;
+  grid-row-gap: 10px;
+  grid-template-areas:
+    "txt1 input1" "txt2 input2" "txt3 input3"
+    "txt4 input4" "txt5 input5" "txt6 input6" "txt7 input7" "txt8 input8"
+    "txt9 input9";
+}
+.leftMargin {
+  margin-left: 10px;
+}
+.pad5 {
+  padding: 5px;
+}
+
+/* =========================ERROR */
+.err_bigcontainer {
+  margin-top: 50px;
+}
+.err_container {
+  padding: 50px;
+  width: 600px;
+  height: 700px;
+  top: 30vh;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 8px rgb(65, 65, 65);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.err_body {
+  width: 100%;
+  height: 200px;
+  color: black;
+  font-size: 16px;
+  margin-top: 50px;
+}
+.errBtn {
+  padding: 5px;
+  right: 0;
+}
+
+
+/* ===========================joinAccount[STD] */
+
+.join2_container {
+  display: grid;
+  grid-template-rows: 2fr 7fr 3fr;
+  width: 700px;
+  height: 550px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 8px rgb(65, 65, 65);
+}
+.join2_header {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(19, 55, 121);
+  color: #ffffff;
+}
+.join2_body {
+  padding: 0 100px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-rows: repeat(7, 60px);
+}
+.joinRow {
+  display: grid;
+  grid-template-rows: repeat(2, 50%);
+  grid-template-columns: 2fr 4fr 1fr;
+}
+.joinRow > input {
+  width: 90%;
+  height: 100%;
+  background-color: #ececec;
+}
+.join2_footer {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 350px;
+}
+.memCom {
+  padding: 5px;
+  background-color: var(--bg-primary);
+  border: none;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 2px;
+  margin-right: 5px;
+}
+#ctfNum {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+#ctfBtn {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.join_width {
+  padding-top: 2px;
+  font-size: 10px;
+  width: 90%;
+  color:red;
+}
+
+.join3_container {
+  display: grid;
+  grid-template-rows: 2fr 7fr 3fr;
+  width: 700px;
+  height: 600px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 8px rgb(65, 65, 65);
+}
+.join3_body {
+  padding: 0 100px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-rows: repeat(8, 60px);
+}

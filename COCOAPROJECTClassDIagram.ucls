@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="kh.cocoa.controller.UserController" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/controller/UserController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="914" y="344"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="kh.cocoa.service.BoardService" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/service/BoardService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2228" y="1099"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="kh.cocoa.service.UsersServices" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/service/UsersServices.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="708" y="1108"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="kh.cocoa.service.FilesService" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/service/FilesService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1165" y="1073"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="kh.cocoa.service.HwService" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/service/HwService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1710" y="1263"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="kh.cocoa.controller.BoardController" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/controller/BoardController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2300" y="190"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="kh.cocoa.controller.HwController" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/controller/HwController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1304" y="177"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="kh.cocoa.controller.CommentController" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/controller/CommentController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2878" y="192"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="kh.cocoa.service.CommentsService" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/service/CommentsService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2869" y="1083"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="kh.cocoa.statics.BoardConfigurator" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/statics/BoardConfigurator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2581" y="948"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="kh.cocoa.controller.ProfHwController" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/controller/ProfHwController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1784" y="231"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="kh.cocoa.controller.SidebarController" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/controller/SidebarController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="264" y="82"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="kh.cocoa.service.AdminService" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/service/AdminService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="243" y="999"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="kh.cocoa.dao.AuthDAO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dao/AuthDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="144" y="1872"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="kh.cocoa.controller.EmailController" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/controller/EmailController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="9" y="133"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="kh.cocoa.controller.FilesController" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/controller/FilesController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="571" y="109"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="kh.cocoa.controller.HomeController" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/controller/HomeController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="237" y="225"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="kh.cocoa.controller.WebMvcConfig" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/controller/WebMvcConfig.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="330" y="364"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="kh.cocoa.statics.HwConfigurator" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/statics/HwConfigurator.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1381" y="659"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="kh.cocoa.dao.BoardDAO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dao/BoardDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2235" y="1978"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="kh.cocoa.dao.ClassDAO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dao/ClassDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="447" y="1886"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="kh.cocoa.dao.CommentsDAO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dao/CommentsDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2881" y="1976"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="kh.cocoa.dao.Files_BoardDAO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dao/Files_BoardDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1163" y="1969"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="kh.cocoa.dao.HwDAO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dao/HwDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1700" y="2170"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="kh.cocoa.dao.UsersDAO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dao/UsersDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="787" y="2230"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="kh.cocoa.dto.AuthDTO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dto/AuthDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="129" y="2869"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="kh.cocoa.dto.BoardDTO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dto/BoardDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3540" y="2925"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="28" language="java" name="kh.cocoa.dto.ClassDTO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dto/ClassDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="386" y="2922"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="29" language="java" name="kh.cocoa.dto.ClassFakeDTO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dto/ClassFakeDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="654" y="2887"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="30" language="java" name="kh.cocoa.dto.CommentsDTO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dto/CommentsDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3860" y="2943"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="31" language="java" name="kh.cocoa.dto.FilesDTO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dto/FilesDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1312" y="2955"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="32" language="java" name="kh.cocoa.dto.Hw_ListDTO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dto/Hw_ListDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1649" y="2995"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="33" language="java" name="kh.cocoa.dto.Hw_SubmitDTO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dto/Hw_SubmitDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2012" y="2990"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="34" language="java" name="kh.cocoa.dto.Hw_ViewDTO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dto/Hw_ViewDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2373" y="2989"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="35" language="java" name="kh.cocoa.dto.SearchDTO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dto/SearchDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2665" y="2853"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="36" language="java" name="kh.cocoa.dto.Std_ViewDTO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dto/Std_ViewDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2930" y="2937"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="37" language="java" name="kh.cocoa.dto.SubjectDTO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dto/SubjectDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="3220" y="2913"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="38" language="java" name="kh.cocoa.dto.UsersDTO" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/dto/UsersDTO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="991" y="3025"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="39" language="java" name="kh.cocoa.utils.EncryptUtils" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/utils/EncryptUtils.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="121" y="3201"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="40" language="java" name="kh.cocoa.email.MailHandler" project="COCOAPROJECT" 
+    file="/COCOAPROJECT/src/main/java/kh/cocoa/email/MailHandler.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="358" y="3278"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="41">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="34"/>  
+  </dependency>  
+  <dependency id="42">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="36"/>  
+  </dependency>  
+  <dependency id="43">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <association id="44">    
+    <end type="SOURCE" refId="15" navigable="false">      
+      <attribute id="45" name="service"/>      
+      <multiplicity id="46" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="47">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="48" name="hservice"/>      
+      <multiplicity id="49" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="50">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="51">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="38"/>  
+  </dependency>  
+  <dependency id="52">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="34"/>  
+  </dependency>  
+  <association id="53">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="54" name="uservice"/>      
+      <multiplicity id="55" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="56">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="57" name="cdao"/>      
+      <multiplicity id="58" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="59">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <association id="60">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="61" name="fdao"/>      
+      <multiplicity id="62" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="23" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="63">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="37"/>  
+  </dependency>  
+  <dependency id="64">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <association id="65">    
+    <end type="SOURCE" refId="3" navigable="false">      
+      <attribute id="66" name="dao"/>      
+      <multiplicity id="67" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="68">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="36"/>  
+  </dependency>  
+  <association id="69">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="70" name="fservice"/>      
+      <multiplicity id="71" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="72">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="28"/>  
+  </dependency>  
+  <association id="73">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="74" name="fservice"/>      
+      <multiplicity id="75" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="76">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="77" name="hdao"/>      
+      <multiplicity id="78" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="24" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="79">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="80" name="bservice"/>      
+      <multiplicity id="81" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="82">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="35"/>  
+  </dependency>  
+  <dependency id="83">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <association id="84">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="85" name="uservice"/>      
+      <multiplicity id="86" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="87">    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="38"/>  
+  </dependency>  
+  <association id="88">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="89" name="AuthDAO"/>      
+      <multiplicity id="90" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="91">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="92" name="hservice"/>      
+      <multiplicity id="93" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="94">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="28"/>  
+  </dependency>  
+  <dependency id="95">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="31"/>  
+  </dependency>  
+  <dependency id="96">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="37"/>  
+  </dependency>  
+  <dependency id="97">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="33"/>  
+  </dependency>  
+  <association id="98">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="99" name="fservice"/>      
+      <multiplicity id="100" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="101">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <dependency id="102">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <dependency id="103">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <dependency id="104">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="31"/>  
+  </dependency>  
+  <dependency id="105">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="31"/>  
+  </dependency>  
+  <dependency id="106">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="35"/>  
+  </dependency>  
+  <dependency id="107">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="38"/>  
+  </dependency>  
+  <dependency id="108">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="109">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="36"/>  
+  </dependency>  
+  <association id="110">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="111" name="fservice"/>      
+      <multiplicity id="112" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="113">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="31"/>  
+  </dependency>  
+  <dependency id="114">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="19"/>  
+  </dependency>  
+  <association id="115">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="116" name="hservice"/>      
+      <multiplicity id="117" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="118">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="37"/>  
+  </dependency>  
+  <dependency id="119">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="35"/>  
+  </dependency>  
+  <association id="120">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="121" name="ClassDAO"/>      
+      <multiplicity id="122" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="123">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="124" name="uservice"/>      
+      <multiplicity id="125" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="126">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="127" name="fservice"/>      
+      <multiplicity id="128" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="129">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="38"/>  
+  </dependency>  
+  <dependency id="130">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="35"/>  
+  </dependency>  
+  <dependency id="131">    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="132">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="33"/>  
+  </dependency>  
+  <dependency id="133">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="19"/>  
+  </dependency>  
+  <dependency id="134">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="19"/>  
+  </dependency>  
+  <dependency id="135">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="33"/>  
+  </dependency>  
+  <dependency id="136">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="26"/>  
+  </dependency>  
+  <dependency id="137">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="37"/>  
+  </dependency>  
+  <dependency id="138">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="38"/>  
+  </dependency>  
+  <association id="139">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="140" name="UsersDAO"/>      
+      <multiplicity id="141" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="25" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="142">    
+    <end type="SOURCE" refId="16"/>    
+    <end type="TARGET" refId="31"/>  
+  </dependency>  
+  <dependency id="143">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="29"/>  
+  </dependency>  
+  <dependency id="144">    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <association id="145">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="146" name="service"/>      
+      <multiplicity id="147" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="148">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="10"/>  
+  </dependency>  
+  <association id="149">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="150" name="bservice"/>      
+      <multiplicity id="151" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="152">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="153" name="fservice"/>      
+      <multiplicity id="154" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="155">    
+    <end type="SOURCE" refId="11"/>    
+    <end type="TARGET" refId="31"/>  
+  </dependency>  
+  <dependency id="156">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="37"/>  
+  </dependency>  
+  <dependency id="157">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="158">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="32"/>  
+  </dependency>  
+  <association id="159">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="160" name="bdao"/>      
+      <multiplicity id="161" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="162">    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="163" name="cservice"/>      
+      <multiplicity id="164" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="165">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="37"/>  
+  </dependency>  
+  <dependency id="166">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="38"/>  
+  </dependency>  
+  <dependency id="167">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="30"/>  
+  </dependency>  
+  <dependency id="168">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="34"/>  
+  </dependency>  
+  <dependency id="169">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="33"/>  
+  </dependency>  
+  <dependency id="170">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="19"/>  
+  </dependency>  
+  <dependency id="171">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="31"/>  
+  </dependency>  
+  <dependency id="172">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="31"/>  
+  </dependency>  
+  <association id="173">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="174" name="hservice"/>      
+      <multiplicity id="175" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="176">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <dependency id="177">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="34"/>  
+  </dependency>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

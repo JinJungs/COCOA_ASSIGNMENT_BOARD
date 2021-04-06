@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="Auth">
+ 	<select id="getAuthList" resultType="kh.cocoa.dto.AuthDTO">
+ 		select * from auth
+ 	</select>
+ 	
+ 	<insert id="insertAuth">
+ 		insert into auth values (#{auth_id},null)
+ 	</insert>
+ </mapper>

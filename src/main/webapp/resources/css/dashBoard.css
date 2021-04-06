@@ -1,0 +1,412 @@
+@charset "UTF-8";
+
+/* ========================================================== dashBoard */
+#subjectContainer {
+    width: 100%;
+    display: grid;
+    padding: 1.5rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3rem;
+    row-gap: 3rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.dashBox {
+    float: left;
+    border-radius: 0.2rem;
+    height: 13rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem #C8C8C8;
+    z-index: 0px;
+}
+
+.colorBox {
+    width: 100%;
+    height: 8rem;
+    border-radius: 0.2rem;
+}
+
+.nameBox {
+    width: 100%;
+    height: 5rem;
+    padding-left: 10px;
+    padding-top: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: -0.1rem 0.1rem 0.2rem #C8C8C8;
+}
+
+.btn_updateSubject,
+.btn_updColor{
+	border: none;
+	color: #fff;
+	padding: 15px 0;
+	margin: 4px;
+	cursor: pointer;
+	position:relative;
+	left:14rem;
+    width: 2rem;
+    height: 2rem;
+    line-height: 0rem;
+    font-size: 1rem;
+    background-color: transparent;
+    z-index: 5rem;
+}
+
+
+/* ========================================================== myHwSubmitView */
+.myHw_container{
+    height: 40rem;
+}
+.listHead {
+    background-color: var(--bg-primary);
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 6fr 1fr 1fr;
+    padding: 0.2rem;
+    font-weight: 400;
+    border-radius: 0.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.listHead > div {
+    justify-self: center;
+}
+
+.listContents {
+    display: grid;
+    grid-auto-rows: 2.5rem;
+}
+
+.listItem {
+    border-bottom: 1px solid #b6b6b6;
+    border-radius: 0.2rem;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 6fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+.listItem > div{
+    justify-self: center;
+    font-size: 0.9rem;
+}
+.listItem > .hw_list_title{
+    justify-self: left;
+}
+
+.listItem:hover {
+    background-color: var(--text-secondary);
+}
+.submit_date {
+  font-size: 0.7rem;
+}
+.listFooter{
+   text-align: center;
+}
+.page_nav_container{
+
+}
+.empty{
+    height: 2rem;
+}
+
+#submit_Button {
+    width: 2.5rem;
+    height: 1rem;
+    line-height: 0rem;
+    font-size: 0.8rem;
+}
+#modify_Button {
+    width: 2.5rem;
+    height: 1rem;
+    line-height: 0rem;
+    font-size: 0.8rem;
+}
+
+
+
+/* ========================================================== hwSubmitCreate */
+.titleContainer{
+    
+}
+.fileUploadBox{
+	width: 100%;
+	minHeight: 2rem;
+	padding-left: 0.5rem;
+}
+.fileUploadContainer{
+	width: 300px;
+	height: 400px;
+}
+.writeBoxContainer{
+	width: 100%;
+}
+/* .writeBox{
+    z-index: 10;
+    width: 100%;
+} */
+.input_title{
+    width: 50rem;
+    height: 2rem;
+    padding: 0.5rem;
+    text-emphasis: 
+}
+
+.note-editer,
+.note-frame,
+.card{
+	width: 60px;
+}
+
+#btn_cancel{
+    background-color: #b6b6b6;
+    position: relative;
+    left: 50rem;
+    width: 4rem;
+    height: 2.5rem;
+    font: 0.8rem;
+	line-height: 0rem;
+	margin-left: 0.3rem;
+}
+#btn_write{
+    position: relative;
+    left: 50rem;
+    width: 4rem;
+    height: 2.5rem;
+    font: 0.8rem;
+	line-height: 0rem;
+}
+
+#btn_upload{
+    position: relative;
+    width: 5rem;
+    height: 2.5rem;
+    font: 0.8rem;
+	line-height: 0rem;
+} 
+
+/* ========================================================== hwSubmitRead */
+
+.readTitleBox{
+    margin-bottom: 0.8rem;
+}
+.readHeader{
+    display: grid;
+    grid-template-columns: 1.5fr 0.2fr 19fr 2fr;
+    grid-auto-rows: 1.5rem;
+    border-bottom: 1px solid #b6b6b6;
+    padding-left: 5px;
+}
+
+.readHeader>div{
+    float: left;
+    font-size: 0.8rem;
+}
+.readContentsBox{
+    padding: 0.5rem;
+    border: 1px solid #b6b6b6;
+    min-height: 25rem;
+    overflow: auto;
+}
+.readFooter{
+	padding: 0.5rem;
+}
+#btn_update{
+    position: relative;
+    left: 50rem;
+    width: 4rem;
+    height: 2.5rem;
+    font: 0.8rem;
+	line-height: 0rem;
+}
+#btn_delete{
+    position: relative;
+    left: 50rem;
+    width: 4rem;
+    height: 2.5rem;
+    font: 0.8rem;
+	line-height: 0rem;
+}
+
+#myModal{
+	display: none;
+    width: 18rem;
+    padding: 1rem 1rem;
+    background-color: #fefefe;
+    border: 1px solid #888;
+    border-radius: 3px;
+}
+
+#filesContainer{
+	width: 100%;
+	height: 3rem;
+	padding-top: 0.5rem;
+	padding-right: 0.5rem;
+	text-align: right;
+	font-size: 0.8rem;
+    color: darkgray;
+    display: none;
+}
+.fileList{
+	text-align: left;
+	padding-left: 0.5rem;
+}
+#files{
+	font-size: 0.9rem;
+	color: #b6b6b6;
+	cursor: pointer;
+}
+#files:hover {
+	color: var(--bg-primary);
+}
+.div_close_modal{
+	cursor: pointer;
+	background-color: #DDDDDD; 
+	text-align: center; 
+	padding-bottom: 10px; 
+	padding-top: 10px;
+}
+.downloadTitle{
+	text-align: center;
+}
+#btn_close_modal{
+	font-size: 13pt;
+}
+/* ========================================================== hwSubmitUpdate */
+.btn_deleteFile{
+	width: 1rem;
+	height: 1rem;
+	line-height: 1rem;
+	text-align: center;
+}
+ul{
+	list-style: none;
+}
+
+
+
+
+
+
+/* ****************************** Prof ***************************** */
+
+/* ========================================================== pDashBoard */
+/* 과목 생성버튼 */
+.subjectFooter{
+	width: 100%;
+	height: 4rem;
+}
+.selectClass{
+	float: left;
+	position: relative;
+	left: 63rem;
+	top: 1rem;
+	width: 4rem;
+	
+}
+
+/* 대시보드의 과제생성 버튼 */
+#show-modal{
+	position: relative;
+    left: 53rem;
+    font: 0.8rem;
+}
+
+/* 과목 생성시의 모달창 */
+#createSubModal{
+	display: none;
+    width: 30rem;
+    min-height: 25rem;
+    padding: 1rem 1rem;
+    background-color: #fefefe;
+    border: 1px solid #888;
+    border-radius: 3px;
+}
+/* 과목 이름 input text */
+#subjectName{
+	width: 100%;
+	height: 1.5rem;
+	padding-left: 0.5rem;
+}
+/* 과목 내용  textarea*/
+#subjectContents{
+	resize: vertical;
+	width: 100%;
+	min-height: 10rem;
+	padding: 0.5rem;
+}
+/* 모달창 - 과목 등록 버튼 */
+#btn_createSubject{
+	position: relative;
+	left: 19.5rem;
+    background-color: var(--bg-primary);
+    margin-right: 0.3rem;
+}
+/* 모달창 - 닫기버튼 */
+.btn_close_Submodal{
+	cursor: pointer;
+	position: relative;
+	left: 18rem;
+} 
+
+#btn_close_Submodal{
+	left: 19.5rem;
+}
+
+/* 과목 수정, 삭제 시의 모달창 */
+#updateSubModal{
+	display: none;
+    width: 30rem;
+    min-height: 25rem;
+    padding: 1rem 1rem;
+    background-color: #fefefe;
+    border: 1px solid #888;
+    border-radius: 3px;
+}	
+/* 과목 이름 input text */
+#updSubjectName{
+	width: 100%;
+	height: 1.5rem;
+	padding-left: 0.5rem;
+}
+/* 과목 내용  textarea*/
+#updSubjectContents{
+	resize: vertical;
+	width: 100%;
+	min-height: 10rem;
+	padding: 0.5rem;
+}
+/* 모달창 - 과목 수정 버튼 */
+#btn_updateSubject{
+}
+
+.div_close_Submodal{
+	background-color: #DDDDDD; 
+	text-align: center; 
+	padding-bottom: 10px; 
+	padding-top: 10px;
+}
+
+.readContentsBox{
+	word-break: break-all;
+}
+.ox {
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-weight: bold;
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+#x {
+  color: red;
+}
+#o {
+  color: green;
+}
+
+
