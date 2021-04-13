@@ -1,4 +1,4 @@
-# 📚 과제 제출 게시판 COCOA ASSIGNMENT
+# 📚 코코아 과제 제출 게시판 COCOA ASSIGNMENT
 
 
 
